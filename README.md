@@ -23,3 +23,7 @@ project — do not copy these rules into your app.
 
 Your code stays in your CI: the scanners run on the GitHub runner and AISG receives only finding
 metadata. See the [action README](https://github.com/aisg-security/scan-action) for details.
+
+This branch is the demo pull request: it adds the insecure rules above.
+
+Scanned with aisg-security/scan-action@v1.
