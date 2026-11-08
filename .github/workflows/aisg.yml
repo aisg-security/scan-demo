@@ -1,0 +1,20 @@
+name: AISG security scan
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  aisg:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aisg-security/scan-action@v1
+        with:
+          aisg-worker: ${{ secrets.AISG_WORKER }}
+          fail-on: none
